@@ -1,0 +1,113 @@
+.blog-area {
+    background: #f5f4f4;
+    padding: 50px;
+    background-repeat: no-repeat !important;
+
+    .sec-title {
+        text-align: center;
+        margin-bottom: 30px;
+
+        h2 {
+            color: #000000;
+
+            span {
+                color: #FB5B42;
+            }
+        }
+    }
+}
+
+.single-blog {
+    background: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(173, 171, 171, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &__image {
+        padding: 0;
+        margin: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__info {
+        padding: 30px 25px 5px;
+
+        h3 {
+            font-size: 19px;
+            line-height: 21px;
+            // min-height: 65px;
+        }
+
+        a {
+            color: #000000;
+            transition: color 0.3s ease;
+            font-family: "nunito sans";
+            font-weight: bold;
+
+            &:hover {
+                color: $primary_color;
+            }
+        }
+
+        span {
+            font-size: 16px;
+            color: #585B63;
+        }
+    }
+}
+
+.single-post-item {
+    border-bottom: 1px solid #f1f1f1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    h2 {
+        font-size: 25px;
+        font-weight: 600;
+        color: $darkerblue_color;
+        margin: 0;
+    }
+
+    .entry-meta {
+        margin-bottom: 10px;
+    }
+
+    .entry-content {
+
+        a {
+            float: right;
+            font-weight: 600;
+            color: $darkerblue_color;
+        }
+    }
+
+    .entry-footer {
+        margin-top: 10px;
+
+        span {
+            margin-right: 5px;
+
+            &:not(:last-child):after {
+                content: '/';
+                padding-left: 5px;
+                color: #ddd;
+            }
+        }
+    }
+
+    img {
+        margin-bottom: 10px;
+    }
+}

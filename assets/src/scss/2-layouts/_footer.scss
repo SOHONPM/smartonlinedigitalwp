@@ -1,0 +1,162 @@
+/**--------------------------
+Site Footer
+---------------------------- **/
+.site-footer {
+    padding: 70px 0 0 0;
+    background: #151424;
+    text-align: center;
+
+    .widget-title {
+        color: #747981;
+        font-family: "nunito sans";
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .menu-main-menu-container,
+    .menu-useful-links-container {
+        li {
+            padding-bottom: 0;
+        }
+
+        a {
+            font-size: 18px;
+            font-family: "nunito sans";
+            color: #fff;
+        }
+    }
+
+    .social-links {
+        display: flex;
+
+        @include breakpoint(768) {
+            width: fit-content;
+            margin: 0 auto 20px;
+        }
+
+        li {
+            padding-bottom: 0;
+
+            .nav-link {
+                padding: 0;
+                margin-right: 10px;
+
+                i {
+                    color: #25C6FE;
+                }
+            }
+        }
+    }
+
+    @include min-breakpoint(768) {
+        text-align: left;
+    }
+
+    .site-logo {
+        margin: 0 auto;
+
+        @include min-breakpoint(768) {
+            margin: 0;
+        }
+    }
+
+    .site-info {
+        display: none;
+
+        @include min-breakpoint(768) {
+            line-height: 21px;
+            display: block;
+            margin-top: 10px;
+        }
+
+    }
+
+    &__bottom {
+        padding: 20px 0 15px 0;
+        text-align: center;
+
+        @include min-breakpoint(768) {
+            text-align: left;
+        }
+    }
+}
+
+.footer-navigation {
+    margin-bottom: 20px;
+
+    @include min-breakpoint(768) {
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    ul {
+        text-align: center;
+
+        @include min-breakpoint(768) {
+            text-align: left;
+        }
+
+        li {
+            // display: inline-block;
+
+            @include min-breakpoint(768) {
+                display: block;
+            }
+
+        }
+    }
+}
+
+.footer-nav-extra {
+    text-align: center;
+
+    @include min-breakpoint(768) {
+        text-align: right;
+    }
+
+    li {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+
+.copyright {
+    color: #ABB2C7;
+}
+
+.footer-contact {
+    p {
+        font-size: 17px;
+        margin: 0;
+        font-family: "nunito sans";
+        color: white;
+        font-weight: lighter;
+
+        &.postal {
+            margin-top: 30px;
+        }
+    }
+}
+
+.footer-about {
+    color: #8B8B8B;
+    font-size: 16px;
+    font-family: "nunito sans";
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+    @include breakpoint(768) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    font-family: "nunito sans";
+}

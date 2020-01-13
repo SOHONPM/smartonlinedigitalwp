@@ -1,0 +1,41 @@
+section.hero-section {
+    // position: relative;
+    background: linear-gradient(180deg, rgb(242, 241, 241) 50%, rgb(255, 255, 255) 100%);
+
+    &::before {
+        content: "";
+        width: 100%;
+        // left: -100px;
+        // background: #F2F1F1 0% 0% no-repeat padding-box;
+        background: url('../images/background.jpg');
+        // transform: matrix(0.97, -0.22, 0.22, 0.97, 0, 0);
+        height: 100%;
+        position: absolute;
+        background-size: cover;
+        background-position-y: -300px;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .title {
+            font-size: 45px;
+            color: black;
+        }
+
+        .hero-button {
+            margin-top: 10px;
+
+            a {
+                margin-right: 10px;
+                text-align: center;
+                color: white;
+                font-family: poppins;
+                font-weight: 600;
+                letter-spacing: 1px
+            }
+        }
+    }
+}

@@ -1,0 +1,335 @@
+/** =========================================
+1.0  Site Header
+========================================== */
+.site-header {
+    background: #F2F1F1;
+    z-index: 9;
+    position: relative;
+
+    &__top {
+        padding: 5px 0;
+        color: $darkerblue_color;
+
+        .grid {
+            flex-wrap: wrap;
+        }
+
+        .col {
+
+            &--left,
+            &--right {
+                padding: 0;
+            }
+
+            &--left {
+                width: 115px;
+                display: flex;
+                align-items: center;
+
+                @include min-breakpoint(768) {
+                    width: 50%;
+                }
+            }
+
+            &--right {
+                width: calc(100% - 115px);
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+
+                @include min-breakpoint(768) {
+                    width: 50%;
+                }
+
+                span {
+                    display: inline-block;
+                    margin-right: 5px;
+                    font-size: 16px;
+
+                    @include min-breakpoint(768) {
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+
+        span {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        .btn {
+            padding: 6px 15px;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: $darkerblue_color;
+
+            &:hover {
+                color: #fff;
+            }
+
+        }
+    }
+
+    &__middle {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        // border-bottom: 1px solid #efebeb;
+        justify-content: space-between;
+        position: relative;
+
+        >div {
+            display: flex;
+
+            @include breakpoint(521) {
+                display: block;
+            }
+
+            .wrapper {
+                display: flex;
+                // width: 100%;
+            }
+        }
+
+        .call-now {
+            width: 200px;
+            margin-left: 30px;
+
+            @include breakpoint(521) {
+                width: calc(100% - 100px);
+            }
+
+            .call {
+                font-size: 13px;
+                margin: 0;
+
+                @include breakpoint(521) {
+                    text-align: right;
+                }
+
+            }
+
+            .phone-number {
+                margin: 0;
+                font-size: 15px;
+                color: black;
+                font-weight: bold;
+                line-height: 1;
+
+                @include breakpoint(521) {
+                    text-align: right;
+                }
+
+            }
+        }
+
+        .follow-us {
+            font-size: 13px;
+            margin: 0;
+            margin-right: 10px;
+            padding-top: 5px;
+        }
+    }
+}
+
+.site-logo {
+
+    img {
+        width: 200px;
+
+        @include breakpoint(521) {
+            width: unset;
+        }
+    }
+}
+
+.site-nav {
+    width: calc(100% - 130px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include breakpoint(521) {
+        width: 100%;
+    }
+
+    nav {
+        padding: 0;
+        display: block;
+
+        .wrapper {
+            display: flex;
+        }
+    }
+
+    .btn {
+        display: none;
+    }
+
+    @include min-breakpoint(768) {
+        .btn {
+            display: block;
+            font-size: 17px;
+
+            i {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+        }
+    }
+
+    #burgerMenu {
+        width: 25px;
+    }
+
+    .navbar-toggler {
+        padding: 0;
+        display: unset;
+
+        &:focus {
+            background: #f2f1f1;
+        }
+
+        &-icon {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .navbar {
+
+        &__mobile {
+            display: flex;
+            align-items: center;
+
+
+
+            &:hover,
+            &:focus {
+                &:not(.social-links) {
+
+                    .navbar-toggler {
+                        background: transparent;
+                        cursor: pointer;
+
+                        rect {
+                            fill: rgb(14, 35, 87);
+                        }
+
+                    }
+
+                    a {
+                        color: $primary_color;
+
+                    }
+                }
+            }
+
+        }
+
+        @include breakpoint(767) {
+            position: inherit;
+        }
+
+        button {
+
+            &:hover,
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .navbar-brand {
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+
+        // @include min-breakpoint(768) {
+        //     display: none;
+        // }
+    }
+
+    .navbar-collapse {
+        @include breakpoint(767) {
+            margin-top: 20px;
+            position: absolute;
+            z-index: 5;
+            width: 100%;
+            background: #f4f4f7;
+            left: 0;
+            // padding: 10px 0;
+        }
+
+        position: absolute;
+
+
+    }
+
+}
+
+.main-menu {
+    text-align: right;
+    background: #b5b5b5;
+    display: block;
+    padding-right: 15px;
+
+    @include breakpoint(767) {
+        padding: 15px;
+        // padding: 10px 0;
+    }
+
+    li {
+        display: inline-block;
+        margin-left: 20px;
+        padding: 0;
+
+        @include breakpoint(767) {
+            display: block;
+        }
+
+        a {
+            font-family: $brand_fontbold;
+            font-size: 19px;
+            transition: color 0.3s ease;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        &.current-menu-item {
+            a {
+                color: $primary_color;
+            }
+        }
+    }
+}
+
+#menu-social {
+    display: flex;
+    margin-right: 10px;
+    padding-top: 5px;
+
+    li {
+        padding-bottom: 0;
+    }
+
+    .nav-link {
+        padding: 0 5px;
+        line-height: 1;
+
+        i {
+            font-size: 15px;
+        }
+    }
+}
+
+@include min-breakpoint(767) {
+    .navbar-expand-md .navbar-collapse {
+        &.collapse:not(.show) {
+            display: none !important;
+        }
+    }
+}
