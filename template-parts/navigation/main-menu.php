@@ -29,7 +29,7 @@
 			));
 
 			?>
-			<div class="navbar__mobile">
+			<div id="toggle">
 				<!-- <a class="navbar-brand" href="#">Menu</a> -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -44,21 +44,22 @@
 				</button>
 			</div>
 		</div>
-		<?php
+		<div id="popout">
+			<?php
+			wp_nav_menu(array(
+				'menu'           => 'Primary Menu', // Do not fall back to first non-empty menu.
+				'depth'	         => 2,
+				'theme_location' => 'top',
+				'menu_class' 	 => 'nav navbar-nav main-menu',
+				'container'       => 'div',
+				// 'container_class' => 'collapse navbar-collapse',
+				// 'container_id'    => 'navbarSupportedContent',
+				'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+				'walker'          => new WP_Bootstrap_Navwalker(),
+			));
 
-		wp_nav_menu(array(
-			'menu'           => 'Primary Menu', // Do not fall back to first non-empty menu.
-			'depth'	         => 2,
-			'theme_location' => 'top',
-			'menu_class' 	 => 'nav navbar-nav main-menu',
-			'container'       => 'div',
-			'container_class' => 'collapse navbar-collapse',
-			'container_id'    => 'navbarSupportedContent',
-			'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-			'walker'          => new WP_Bootstrap_Navwalker(),
-		));
-
-		?>
+			?>
+		</div>
 	</nav>
 
 <?php endif; ?>

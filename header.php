@@ -29,7 +29,7 @@ if (!defined('ABSPATH')) {
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body id="body" <?php body_class(); ?>>
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader-inner">
@@ -74,12 +74,12 @@ if (!defined('ABSPATH')) {
 					<div class="site-nav">
 						<?php get_template_part('template-parts/navigation/main', 'menu'); ?>
 						<!-- <?php //if( get_theme_mod('header_button') ) : 
-									?>
-			 	 		<?php //echo get_theme_mod('header_button') 
 								?>
+			 	 		<?php //echo get_theme_mod('header_button') 
+							?>
 								
 			 	 	<?php //endif; 
-							?> -->
+						?> -->
 					</div>
 					<!-- . Site Nav -->
 				<?php endif; ?>

@@ -2,7 +2,7 @@
 1.0  Site Header
 ========================================== */
 .site-header {
-    background: #F2F1F1;
+    background: #f2f1f1;
     z-index: 9;
     position: relative;
 
@@ -37,7 +37,6 @@
                 justify-content: flex-end;
                 align-items: center;
 
-
                 @include min-breakpoint(768) {
                     width: 50%;
                 }
@@ -68,7 +67,6 @@
             &:hover {
                 color: #fff;
             }
-
         }
     }
 
@@ -108,7 +106,6 @@
                 @include breakpoint(521) {
                     text-align: right;
                 }
-
             }
 
             .phone-number {
@@ -121,7 +118,6 @@
                 @include breakpoint(521) {
                     text-align: right;
                 }
-
             }
         }
 
@@ -135,7 +131,6 @@
 }
 
 .site-logo {
-
     img {
         width: 200px;
 
@@ -177,7 +172,6 @@
                 display: inline-block;
                 margin-right: 5px;
             }
-
         }
     }
 
@@ -188,6 +182,14 @@
     .navbar-toggler {
         padding: 0;
         display: unset;
+
+        &:hover {
+            background-color: transparent !important;
+
+            rect {
+                fill: #51E9B7
+            }
+        }
 
         &:focus {
             background: #f2f1f1;
@@ -200,17 +202,13 @@
     }
 
     .navbar {
-
         &__mobile {
             display: flex;
             align-items: center;
 
-
-
             &:hover,
             &:focus {
                 &:not(.social-links) {
-
                     .navbar-toggler {
                         background: transparent;
                         cursor: pointer;
@@ -218,16 +216,13 @@
                         rect {
                             fill: rgb(14, 35, 87);
                         }
-
                     }
 
                     a {
                         color: $primary_color;
-
                     }
                 }
             }
-
         }
 
         @include breakpoint(767) {
@@ -265,15 +260,12 @@
         }
 
         position: absolute;
-
-
     }
-
 }
 
 .main-menu {
-    text-align: right;
-    background: #b5b5b5;
+    // text-align: right;
+    // background: #b5b5b5;
     display: block;
     padding-right: 15px;
 
@@ -283,7 +275,7 @@
     }
 
     li {
-        display: inline-block;
+        // display: inline-block;
         margin-left: 20px;
         padding: 0;
 
@@ -326,10 +318,59 @@
     }
 }
 
-@include min-breakpoint(767) {
-    .navbar-expand-md .navbar-collapse {
-        &.collapse:not(.show) {
-            display: none !important;
+
+
+
+
+// #toggle {
+//     display: none;
+// }
+
+
+
+#popout {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    background: rgb(25, 25, 25);
+    background: rgba(25, 25, 25, .9);
+    color: white;
+    top: 0px;
+    right: -250px;
+    overflow: auto;
+    padding-top: 65px;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: #51E9B7
         }
     }
+}
+
+// #toggle {
+//     float: right;
+//     // position: fixed;
+//     top: 60px;
+//     right: 45px;
+//     width: 28px;
+//     height: 24px;
+
+// }
+
+.nav-menu li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    width: 100%;
+}
+
+.nav-menu li:hover {
+    background: #CCC;
+}
+
+.nav-menu li a {
+    color: #FFF;
+    text-decoration: none;
+    width: 100%;
 }

@@ -28,6 +28,10 @@ section.hero-section {
         .hero-button {
             margin-top: 10px;
 
+            &:hover {
+                background: #2B4DA0 !important;
+            }
+
             a {
                 margin-right: 10px;
                 text-align: center;

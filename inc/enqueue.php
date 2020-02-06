@@ -29,6 +29,7 @@ function themezero_scripts()
         wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), false, true);
         wp_enqueue_script('bootstrap',  get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), false, true);
         wp_enqueue_script('starter_customJs');
+        // wp_enqueue_script('wpb_slidepanel', get_template_directory_uri() . '/js/custom/slidepanel.js', array('jquery'), '20131010', true);
     }
 }
 

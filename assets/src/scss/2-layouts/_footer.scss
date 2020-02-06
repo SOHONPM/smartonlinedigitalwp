@@ -44,6 +44,10 @@ Site Footer
 
                 i {
                     color: #25C6FE;
+
+                    &:hover {
+                        color: white;
+                    }
                 }
             }
         }
@@ -80,6 +84,14 @@ Site Footer
             text-align: left;
         }
     }
+
+    #menu-useful-links {
+        a {
+            &:hover {
+                color: #25C6FE
+            }
+        }
+    }
 }
 
 .footer-navigation {
@@ -107,6 +119,11 @@ Site Footer
                 display: block;
             }
 
+            a {
+                &:hover {
+                    color: #25C6FE
+                }
+            }
         }
     }
 }

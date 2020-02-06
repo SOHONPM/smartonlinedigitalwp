@@ -5,54 +5,54 @@
  *
  * @since 1.0.0
  */
-(function($){
+(function ($) {
 
-	$('.owl-carousel').owlCarousel({
-	    loop:true,
-	    margin:10,
-	    autoplay: false,
-	    autoHeight:true,
-	    nav:true,
-	    navText: ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>'],
-	    responsive:{
-	        0:{
-	            items:1,
-	            nav: false
-	        },
-	        600:{
-	            items:1,
-	            nav: true
-	        },
-	        1000:{
-	            items:1
-	        }
-	    }
-	})
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: false,
+        autoHeight: true,
+        nav: true,
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            600: {
+                items: 1,
+                nav: true
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
 
-	$('.slider1').owlCarousel({
-	    loop:true,
-	    margin:10,
-	    autoplay: false,
-	    autoHeight:true,
-	    nav:true,
-	    navText: ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>'],
-	    responsive:{
-	        0:{
-	            items:1,
-	            nav: false
-	        },
-	        600:{
-	            items:1,
-	            nav: true
-	        },
-	        1000:{
-	            items:1
-	        }
-	    }
-	})
+    $('.slider1').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: false,
+        autoHeight: true,
+        nav: true,
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            600: {
+                items: 1,
+                nav: true
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
 
-	$.fn.VideoPopUp = function (options) {
-        
+    $.fn.VideoPopUp = function (options) {
+
         var defaults = {
             backgroundColor: "#000000",
             opener: "video",
@@ -60,7 +60,7 @@
             pausevideo: false,
             idvideo: ""
         };
-        
+
         var patter = this.attr('id');
 
         var settings = $.extend({}, defaults, options);
@@ -73,7 +73,7 @@
                 video.currentTime = 0;
             }
         }
-        
+
         $('#' + patter + '').css("display", "none");
         $('#' + patter + '').append('<div id="opct"></div>');
         $('#opct').css("background", settings.backgroundColor);
@@ -91,15 +91,15 @@
         $('#' + patter + '').append('<div id="closer_videopopup">&otimes;</div>');
         $("#" + settings.opener + "").on('click', function () {
             $('#' + patter + "").show();
-            $('#'+settings.idvideo+'').trigger('play');
+            $('#' + settings.idvideo + '').trigger('play');
 
         });
         $("#closer_videopopup").on('click', function () {
-            if(settings.pausevideo==true){
-                    $('#'+settings.idvideo+'').trigger('pause');
-                }else{
-                    stopVideo();
-                }
+            if (settings.pausevideo == true) {
+                $('#' + settings.idvideo + '').trigger('pause');
+            } else {
+                stopVideo();
+            }
             $('#' + patter + "").hide();
         });
         return this.css({
@@ -108,15 +108,15 @@
     };
 
     $('#vidBox').VideoPopUp({
-      backgroundColor: "#17212a",
-      opener: "videoBtn",
+        backgroundColor: "#17212a",
+        opener: "videoBtn",
         maxweight: "340",
         idvideo: "videoPopper"
     });
 
-    $(window).on('load', function(){
-    	$('.preloader').addClass('hide');
-    	$('body').addClass('scroll-enable');
+    $(window).on('load', function () {
+        $('.preloader').addClass('hide');
+        $('body').addClass('scroll-enable');
     });
 
 })(jQuery)

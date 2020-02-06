@@ -2791,16 +2791,16 @@ section.hero-section::before{content:"";width:100%;background:url("../images/bac
 section.hero-section .container{padding-top:50px;padding-bottom:50px}
 section.hero-section .container .title{font-size:45px;color:black}
 section.hero-section .container .hero-button{margin-top:10px}
+section.hero-section .container .hero-button:hover{background:#2b4da0 !important}
 section.hero-section .container .hero-button a{margin-right:10px;text-align:center;color:white;font-family:poppins;font-weight:600;letter-spacing:1px}
 section.feature-section .container{padding-bottom:50px}
-section.feature-section .container .icon-wrapper{height:50px;margin-bottom:20px}
-section.feature-section .container .icon{height:auto;width:50px}
+section.feature-section .container .icon-wrapper{margin-bottom:20px}
 section.feature-section .container .title{margin-bottom:25px;font-size:20px;color:black}
 section.feature-section .container .main-title{text-align:center;font-size:30px;font-family:"poppins";font-weight:bold}
 section.feature-section .container .main-content{text-align:center;max-width:550px;margin:0 auto;margin-bottom:30px}
 section.feature-section .container .content{font-size:17px}
 section.feature-section .container .boxed{border:1px solid #d1d1d1;min-height:350px;position:relative}
-section.feature-section .container .boxed .box{position:absolute;bottom:0;padding:0 30px}
+section.feature-section .container .boxed .box{bottom:0;padding:20px 30px}
 .text_image-section ul{margin-left:60px}
 .text_image-section ul li .title{font-weight:bold;margin:0;color:#000}
 .text_image-section.non-full-width .image-wrapper{text-align:center;padding-top:50px}
@@ -2860,6 +2860,8 @@ section.feature-section .container .boxed .box{position:absolute;bottom:0;paddin
 .site-nav .btn{display:none}
 .site-nav #burgerMenu{width:25px}
 .site-nav .navbar-toggler{padding:0;display:unset}
+.site-nav .navbar-toggler:hover{background-color:transparent !important}
+.site-nav .navbar-toggler:hover rect{fill:#51e9b7}
 .site-nav .navbar-toggler:focus{background:#f2f1f1}
 .site-nav .navbar-toggler-icon{width:auto;height:auto}
 .site-nav .navbar__mobile{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -2869,14 +2871,20 @@ section.feature-section .container .boxed .box{position:absolute;bottom:0;paddin
 .site-nav .navbar button:hover,.site-nav .navbar button:focus{outline:0}
 .site-nav .navbar-brand{font-weight:600;font-size:18px;text-transform:uppercase}
 .site-nav .navbar-collapse{position:absolute}
-.main-menu{text-align:right;background:#b5b5b5;display:block;padding-right:15px}
-.main-menu li{display:inline-block;margin-left:20px;padding:0}
+.main-menu{display:block;padding-right:15px}
+.main-menu li{margin-left:20px;padding:0}
 .main-menu li a{font-family:"poppins bold","Helvetica Neue",helvetica,arial,sans-serif;font-size:19px;-webkit-transition:color .3s ease;transition:color .3s ease;padding-left:0 !important;padding-right:0 !important}
 .main-menu li.current-menu-item a{color:#51e9b7}
 #menu-social{display:-webkit-box;display:-ms-flexbox;display:flex;margin-right:10px;padding-top:5px}
 #menu-social li{padding-bottom:0}
 #menu-social .nav-link{padding:0 5px;line-height:1}
 #menu-social .nav-link i{font-size:15px}
+#popout{position:fixed;height:100%;width:250px;background:#191919;background:rgba(25,25,25,0.9);color:white;top:0;right:-250px;overflow:auto;padding-top:65px}
+#popout a{color:white}
+#popout a:hover{color:#51e9b7}
+.nav-menu li{border-bottom:1px solid #eee;padding:20px;width:100%}
+.nav-menu li:hover{background:#CCC}
+.nav-menu li a{color:#FFF;text-decoration:none;width:100%}
 .site-footer{padding:70px 0 0 0;background:#151424;text-align:center}
 .site-footer .widget-title{color:#747981;font-family:"nunito sans";font-weight:bold;font-size:20px;margin-bottom:30px}
 .site-footer .menu-main-menu-container li,.site-footer .menu-useful-links-container li{padding-bottom:0}
@@ -2885,12 +2893,15 @@ section.feature-section .container .boxed .box{position:absolute;bottom:0;paddin
 .site-footer .social-links li{padding-bottom:0}
 .site-footer .social-links li .nav-link{padding:0;margin-right:10px}
 .site-footer .social-links li .nav-link i{color:#25c6fe}
+.site-footer .social-links li .nav-link i:hover{color:white}
 .site-footer .site-logo{margin:0 auto}
 .site-footer .site-info{display:none}
 .site-footer__bottom{padding:20px 0 15px 0;text-align:center}
+.site-footer #menu-useful-links a:hover{color:#25c6fe}
 .footer-navigation{margin-bottom:20px}
 .footer-navigation h3{font-size:19px}
 .footer-navigation ul{text-align:center}
+.footer-navigation ul li a:hover{color:#25c6fe}
 .footer-nav-extra{text-align:center}
 .footer-nav-extra li{display:inline-block;margin-left:10px}
 .copyright{color:#abb2c7}
@@ -3138,7 +3149,6 @@ section.feature-section .container .boxed .box{position:absolute;bottom:0;paddin
 .text-sm-left{text-align:left !important}
 .text-sm-right{text-align:right !important}
 .text-sm-center{text-align:center !important}
-}@media only screen and (min-width:767px){.navbar-expand-md .navbar-collapse.collapse:not(.show){display:none !important}
 }@media(min-width:768px){.container{max-width:720px}
 .col-md{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
 .col-md-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:100%}
